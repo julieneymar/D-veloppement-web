@@ -1,0 +1,18 @@
+/*body section div p 
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+
+    color: blue;
+}*/
+.blu{
+  color: blue;
+}
+
+.red {
+    color: red;
+}
+
+.paragrap {
+    transition: color 1s;
+}

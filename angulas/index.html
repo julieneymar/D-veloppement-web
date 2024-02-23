@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html ng-app>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> angul formation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" async defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js" async defer></script>
+
+
+    </head>
+    <body ng-app>
+
+        <input type="text" ng-model="query" />
+        <select ng-model="order">
+            <option value="username"> organiser par nom</option>
+            <option value="content"> organiser par contenu</option>
+        </select>
+
+        <div ng-init="comments=[{username:'Marc', content:'salutles gens'},{username:'Jean',content:'je suis content'},{username:'John',content:'First'}]">
+            <div ng-repeat="comment in comments | filter : {content:query} | orderBy:order">
+                <p>
+                    <strong> {{comment.username}} </strong><br>
+                    {{comment.content}}
+                </p>
+            </div>
+             
+        </div> 
+        
+       
+       <script> 
+        function commentCtlr($scope){
+            $scope.comments =[
+                {
+                    "username" : "Dillon",
+                    "city" : "Nile",
+                    "email" : "juhkpl@gmail.com",
+                    "content" : "elit jfiik axecikk pariahn,d valuuh"
+                },
+                {
+                    "username" : "olibiu",
+                    "city" : "kio",
+                    "email" : "kii@gmail.com",
+                    "content" : "je m'en vcfgnd valuuh"
+                },
+                {
+                    "username" : "jokil",
+                    "city" : "cotonpu",
+                    "email" : "lopplo@gmail.com",
+                    "content" : " tu es bete commr lui valuuh"
+                },
+                {
+                    "username" : "papa",
+                    "city" : "calavi",
+                    "email" : "kiuyeaa@gmail.com",
+                    "content" : "cest faix et tu es inteligentuh"
+                },
+                {
+                    "username" : "atulo",
+                    "city" : "paris",
+                    "email" : "juhlookpl@gmail.com",
+                    "content" : "reviens icih"
+                },
+                {
+                    "username" : "lola",
+                    "city" : "togo",
+                    "email" : "jpoiuytr@gmail.com",
+                    "content" : "je fais du sport h"
+                },
+                {
+                    "username" : "tony",
+                    "city" : "enfin",
+                    "email" : "jukiuhkpl@gmail.com",
+                    "content" : "la pute de tout la villeuuh"
+                },
+                
+            ]
+        }
+       </script>
+    </body>
+</html>
